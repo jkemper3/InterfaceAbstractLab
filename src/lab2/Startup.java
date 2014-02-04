@@ -4,16 +4,15 @@
  * and open the template in the editor.
  */
 
-package lab1;
+package lab2;
 
 /**
  *
- * @author Justin
+ * @author jkemper3
  */
 public class Startup {
     public static void main(String[] args) {
-        
-        ProgrammingCourses intro1 = new  IntroToProgrammingCourse();
+        IntroToProgrammingCourse intro1 = new IntroToProgrammingCourse();
         intro1.setCourseName("Intro to Programming");
         intro1.setCourseNumber("152-135");
         intro1.setCredits(3);
@@ -36,7 +35,7 @@ public class Startup {
                 javaIntro1.getPrerequisites());
         System.out.println(" ");
         
-        IntroJavaCourse advancedJava1 = new  AdvancedJavaCourse();
+        AdvancedJavaCourse advancedJava1 = new AdvancedJavaCourse();
         advancedJava1.setCourseName("Advanced Java");
         advancedJava1.setCourseNumber("152-147");
         advancedJava1.setCredits(4);
@@ -49,3 +48,5 @@ public class Startup {
                 advancedJava1.getPrerequisites());
     }
 }
+    
+

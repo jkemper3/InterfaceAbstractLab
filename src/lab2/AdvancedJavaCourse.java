@@ -8,16 +8,11 @@ import javax.swing.JOptionPane;
  * @author      your name goes here
  * @version     1.00
  */
-public class AdvancedJavaCourse {
-    private String courseName;
+public class AdvancedJavaCourse implements ProgrammingCourses {
+   String courseName;
     private String courseNumber;
     private double credits;
     private String prerequisites;
-
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
-    }
 
     public String getCourseNumber() {
         return courseNumber;
@@ -45,19 +40,6 @@ public class AdvancedJavaCourse {
         this.credits = credits;
     }
 
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-
-    public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
-        }
-        this.prerequisites = prerequisites;
-    }
-
     public String getCourseName() {
         return courseName;
     }
@@ -71,5 +53,17 @@ public class AdvancedJavaCourse {
         this.courseName = courseName;
     }
 
-    
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
+    }
+
 }
